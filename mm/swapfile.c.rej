@@ -1,0 +1,10 @@
+--- mm/swapfile.c
++++ mm/swapfile.c
+@@ -574,6 +574,7 @@
+ 
+ 	/* free if no reference */
+ 	if (!usage) {
++		struct gendisk *disk = p->bdev->bd_disk;
+ 		if (offset < p->lowest_bit)
+ 			p->lowest_bit = offset;
+ 		if (offset > p->highest_bit)
