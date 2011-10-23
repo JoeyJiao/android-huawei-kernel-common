@@ -371,7 +371,7 @@ static int huawei_battery_status_update(u32 curr_level, int curr_temp, u32 curr_
     huawei_batt_info.rep.batt_vol = curr_voltage;
     if (POWER_SUPPLY_STATUS_FULL == huawei_batt_info.charging_status)
     {
-        /*Èç¹û³¤Ê±¼ä´óµçÁ÷Ó¦ÓÃµÄÇé¿öÏÂµ¼ÖÂµç³ØÃ»ÓÐ³äÂú£¬ÔòÏÔÊ¾Êµ¼ÊÖµ*/
+        /*ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½Âµï¿½ï¿½Ã»ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Êµï¿½ï¿½Öµ*/
         if(curr_level >= HUAWEI_BAT_DISP_FULL_LEVEL_VALUE)
         {
             huawei_batt_info.rep.level = 100;
@@ -463,7 +463,7 @@ static int huawei_battery_get_battery_health(void)
     {
         relt = POWER_SUPPLY_HEALTH_OVERHEAT;
     }
-    /*Ôö¼Ó¹ýµÍÎÂµÄÅÐ¶Ï*/
+    /*ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½Âµï¿½ï¿½Ð¶ï¿½*/
     else if (health_temp / 10 < HEALTH_TEMP_MIN)
     {
         relt = POWER_SUPPLY_HEALTH_COLD;
@@ -602,7 +602,7 @@ int huawei_rpc_current_consuem_notify(device_current_consume_type device_event, 
 
 #endif
 
-/*Éè¶¨batteryÉÏ±¨µÄÃÅÏÞ*/
+/*ï¿½è¶¨batteryï¿½Ï±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 static int huawei_rpc_set_delta(unsigned delta)
 {
 	struct set_batt_delta_req {
